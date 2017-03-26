@@ -1,0 +1,34 @@
+{
+  "name": "midigui",
+  "description": "A controller and gui for the Web MIDI API",
+  "version": "0.0.1",
+  "author": "pqml",
+  "main": "build/midigui.js",
+  "browser": "build/midigui.browser.min.js",
+  "module": "build/midigui.es.js",
+  "jsnext:main": "build/midigui.es.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy": "ghp example",
+    "build": "rollup -c && uglifyjs build/midigui.browser.js -c -m > build/midigui.browser.min.js",
+    "dev": "rulo -i src/index.js -o midigui.browser.js -f iife -d example -n midigui -W -c -- -m"
+  },
+  "directories": {
+    "doc": "docs",
+    "example": "example",
+    "test": "test"
+  },
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "babel-plugin-external-helpers": "^6.22.0",
+    "babel-preset-es2015": "^6.24.0",
+    "ghp": "^1.1.4",
+    "rollup": "^0.41.6",
+    "rollup-plugin-babel": "^2.7.1",
+    "rollup-plugin-commonjs": "^8.0.2",
+    "rollup-plugin-node-resolve": "^2.0.0",
+    "rulo": "^0.4.1",
+    "uglifyjs": "^2.4.10"
+  }
+}
