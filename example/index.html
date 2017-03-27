@@ -12,9 +12,14 @@
     </style>
   </head>
   <body>
-    <script src="midigui.min.js"></script>
+    <script src="midigui.umd.js"></script>
     <script>
-      // Code your example here
+      var controller = midigui()
+        .add('pitch')
+        .add('attack')
+        .add('release')
+
+      controller.on('pitch', function (value) { console.log(value) })
     </script>
   </body>
 </html>

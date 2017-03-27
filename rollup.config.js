@@ -6,9 +6,9 @@ const rollupConfig = {
   entry: 'src/midigui.js',
   plugins: [
     nodeResolve({
-      main: true,
       module: true,
-      browser: true,
+      main: true,
+      browser: false,
       skip: [],
       extensions: ['.js', '.json']
     }),
@@ -19,8 +19,8 @@ const rollupConfig = {
   ],
   targets: [
     {
-      format: 'iife',
-      dest: 'build/midigui.browser.js',
+      format: 'umd',
+      dest: 'build/midigui.umd.js',
       moduleName: 'midigui'
     },
     {
