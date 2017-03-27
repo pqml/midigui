@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>midigui</title>
+    <meta name="description" content="An example for midigui">
+    <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0,minimal-ui">
+    <style>
+      body {
+        margin: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <script src="midigui.umd.js"></script>
+    <script>
+      var controller = midigui()
+        .add('pitch')
+        .add('attack')
+        .add('release')
+
+      controller.on('pitch', function (value) { console.log(value) })
+    </script>
+  </body>
+</html>
